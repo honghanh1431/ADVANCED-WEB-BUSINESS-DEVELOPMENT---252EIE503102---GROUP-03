@@ -69,6 +69,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "headers": {
+              "Content-Security-Policy": ""
+            }
+          },
           "configurations": {
             "production": {
               "buildTarget": "my-app:build:production"

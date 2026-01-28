@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 import { PageHeader } from './Components/page-header/page-header';
 import { PageFooter } from './Components/page-footer/page-footer';
 
@@ -7,15 +9,15 @@ import { PageFooter } from './Components/page-footer/page-footer';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
-    PageHeader,
-    PageFooter
+    CommonModule, 
+    RouterOutlet, 
+    RouterModule, 
+    PageHeader, 
+    PageFooter 
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('TeaTrack');
-
 }
-

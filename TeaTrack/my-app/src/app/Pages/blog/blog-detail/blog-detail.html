@@ -1,0 +1,92 @@
+<div class="main-section">
+  <div class="background-overlay"></div>
+  <img src="assets/images/nen.png" alt="Decor" class="top-overlay" />
+
+  <div class="container" *ngIf="blog">
+    <!-- Ngày đăng -->
+    <div class="blog-date">
+      <p>{{ blog.date }}</p>
+    </div>
+
+    <!-- Tiêu đề -->
+    <h1 id="blog-heading" [style.color]="blog.headingColor">
+      {{ blog.heading }}
+    </h1>
+
+    <!-- Subheading -->
+    <h2
+      id="blog-subheading"
+      *ngIf="blog.subheading"
+      [style.color]="blog.headingColor"
+    >
+      {{ blog.subheading }}
+    </h2>
+
+    <!-- Divider -->
+    <div class="title-divider">
+      <hr />
+      <img src="assets/images/logo-divider.png" alt="logo" />
+      <hr />
+    </div>
+
+    <!-- Layout ảnh -->
+    <div class="img" *ngIf="blog.layoutType === 'single'">
+      <img
+        [src]="blog.image || blog.images?.[0]"
+        [alt]="blog.title"
+        class="blog-img"
+      />
+    </div>
+
+    <div class="image-layout" *ngIf="blog.layoutType === 'gallery'">
+      <div class="left-image">
+        <img [src]="blog.images[0]" alt="" />
+      </div>
+      <div class="right-images">
+        <img [src]="blog.images[1]" alt="" />
+        <img [src]="blog.images[2] || blog.images[1]" alt="" class="flip-opc" />
+      </div>
+    </div>
+
+    <!-- Nội dung -->
+    <div class="blog-content" [innerHTML]="blog.content"></div>
+  </div>
+
+  <!-- Related blogs -->
+  <div class="related-section" *ngIf="relatedBlogs.length > 0">
+    <h2 class="related-title">Có thể bạn sẽ quan tâm</h2>
+  </div>
+
+  <div class="related-container">
+    <div
+      class="related-card"
+      *ngFor="let b of relatedBlogs"
+      (click)="openBlog(b.id)"
+    >
+      <img [src]="b.image" [alt]="b.title" class="related-img" />
+
+      <p
+        style="
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          color: #0088ff;
+          font-size: 14px;
+          margin: 0;
+          padding-top: 10px;
+        ">
+        <img
+          src="assets/icons/Vector (1).png"
+          alt="icon"
+          width="12"
+          height="12"
+        />
+        {{ b.date }}
+      </p>
+
+      <h3>{{ b.title }}</h3>
+      <p>{{ b.description }}</p>
+      <a [routerLink]="['/blog', b.id]" class="related-link">Xem chi tiết</a>
+    </div>
+  </div>
+</div>

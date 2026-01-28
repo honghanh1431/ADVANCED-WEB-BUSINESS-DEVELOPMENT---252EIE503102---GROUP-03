@@ -1,9 +1,10 @@
 import { Component, OnInit, AfterViewInit, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-page-header',
-  imports: [],
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './page-header.html',
   styleUrl: './page-header.css',
