@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <!-- Subscribe banner -->
   <section class="subscribe">
-    <img class="cup" src="/TeaTrack/my-app/assets/images/tra-sua.png" alt="Drink" onerror="this.style.display='none'">
+    <img class="cup" src="assets/images/tra-sua.png" alt="Drink" onerror="this.style.display='none'">
     <div class="sub-text">
       <h3 data-i18n="footer.sub.title">
         Đăng ký bản tin của chúng tôi để được nhận những thông báo mới nhất về các ưu đãi và khuyến mãi cực hot
@@ -19,17 +19,17 @@
   <!-- Columns -->
   <section class="footer-cols">
     <div class="col brand">
-      <img class="logo" src="/TeaTrack/my-app/assets/images/logo ngo gia.png" alt="Hồng Trà Ngô Gia" onerror="this.style.display='none'">
+      <img class="logo" src="assets/images/logo ngo gia.png" alt="Hồng Trà Ngô Gia" onerror="this.style.display='none'">
     </div>
 
     <nav class="col links">
       <h5 data-i18n="footer.links.title">Liên kết nhanh</h5>
       <ul>
-        <li><a href="/src/Pages/Homepage/Home.html" data-i18n="footer.links.home">Trang chủ</a></li>
-        <li><a href="/aboutus" data-i18n="footer.links.about">Về chúng tôi</a></li>
-        <li><a href="/menu" data-i18n="footer.links.menu">Menu thức uống</a></li>
-        <li><a href="/contact" data-i18n="footer.links.contact">Liên hệ</a></li>
-        <li><a href="/blog" data-i18n="footer.links.forum">Diễn đàn</a></li>
+        <li><a routerLink="/src/Pages/Homepage/Home.html" data-i18n="footer.links.home">Trang chủ</a></li>
+        <li><a routerLink="/aboutus" data-i18n="footer.links.about">Về chúng tôi</a></li>
+        <li><a routerLink="/menu" data-i18n="footer.links.menu">Menu thức uống</a></li>
+        <li><a routerLink="/contact" data-i18n="footer.links.contact">Liên hệ</a></li>
+        <li><a routerLink="/blog" data-i18n="footer.links.forum">Diễn đàn</a></li>
       </ul>
     </nav>
 
@@ -45,8 +45,8 @@
     <div class="col contact">
       <h5 data-i18n="footer.contact.title">Liên hệ</h5>
       <ul>
-        <li><img src="/TeaTrack/my-app/assets/icons/phone.png" alt="" /> <span>1222-888</span></li>
-        <li><img src="/TeaTrack/my-app/assets/icons/mail.png" alt="" /> <span>ngogiaxinchao@gmail.com</span></li>
+        <li><img src="assets/icons/phone.png" alt="" /> <span>1222-888</span></li>
+        <li><img src="assets/icons/mail.png" alt="" /> <span>ngogiaxinchao@gmail.com</span></li>
       </ul>
     </div>
   </section>
@@ -55,10 +55,10 @@
   <section class="footer-bottom">
     <div class="copy">Ngô Gia © 2025 All right reserved</div>
     <div class="socials">
-      <a aria-label="Facebook" href="https://byvn.net/o4Yn"><img src="/TeaTrack/my-app/assets/icons/facebook.png" alt=""></a>
-      <a aria-label="TikTok"   href="https://www.tiktok.com/@hongtrangogiavn"><img src="/TeaTrack/my-app/assets/icons/tiktok.png" alt=""></a>
-      <a aria-label="Instagram"href="https://www.instagram.com/wujiablacktea/"><img src="/TeaTrack/my-app/assets/icons/ig.png" alt=""></a>
-      <a aria-label="Thread" href="https://www.instagram.com/wujiablacktea/"><img src="/TeaTrack/my-app/assets/icons/Thread.png" alt=""></a>
+      <a aria-label="Facebook" routerLink="https://byvn.net/o4Yn"><img src="assets/icons/facebook.png" alt=""></a>
+      <a aria-label="TikTok"   routerLink="https://www.tiktok.com/@hongtrangogiavn"><img src="assets/icons/tiktok.png" alt=""></a>
+      <a aria-label="Instagram"routerLink="https://www.instagram.com/wujiablacktea/"><img src="assets/icons/ig.png" alt=""></a>
+      <a aria-label="Thread" routerLink="https://www.instagram.com/wujiablacktea/"><img src="assets/icons/Thread.png" alt=""></a>
     </div>
   </section>
 
@@ -77,6 +77,6 @@
     </div>
   </div>
 </footer>
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="../page-footer/page-footer.css">
+<link rel="stylesheet" routerLink="/style.css">
+<link rel="stylesheet" routerLink="../page-footer/page-footer.css">
 <script src="/src/Components/page-footer/footer.js" defer></script>

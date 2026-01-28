@@ -5,7 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
   selector: 'app-page-header',
   imports: [],
   standalone: true,
-  templateUrl: './page-header-admin.html',
+  templateUrl: './page-header.html',
   styleUrl: './page-header.css',
 })
 
@@ -26,7 +26,7 @@ export class PageHeader implements OnInit, AfterViewInit {
   private initAdminHeaderLogic() {
     const currentPath = window.location.pathname;
     const isAdminPage =
-      currentPath.includes('admin-dashboard') || currentPath.includes('Admin.html');
+      currentPath.includes('admin-dashboard') || currentPath.includes('page-header-admin.html');
     const isAccountPage = currentPath.includes('admin-account');
     const isOrderPage = currentPath.includes('admin-order');
 

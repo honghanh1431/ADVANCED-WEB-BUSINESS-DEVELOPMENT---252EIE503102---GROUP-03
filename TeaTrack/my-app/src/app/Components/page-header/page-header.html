@@ -1,13 +1,13 @@
 <header class="shop-header">
   <div class="header-top">
     <div class="brand">
-      <img src="/TeaTrack/my-app/assets/images/logo ngo gia.png" alt="Hồng Trà Ngô Gia" class="logo" />
+      <img src="assets/images/logo ngo gia.png" alt="Hồng Trà Ngô Gia" class="logo" />
     </div>
 
     <div class="actions">
-      <a class="cart-link" href="/cart/">
+      <a class="cart-link" routerLink="/cart/">
         <span class="icon-wrap">
-          <img src="/TeaTrack/my-app/assets/icons/Cart.png" alt="Giỏ hàng">
+          <img src="assets/icons/Cart.png" alt="Giỏ hàng">
           <span class="cart-badge" data-cart-count>0</span>
         </span>
         <div class="cart-meta">
@@ -16,19 +16,17 @@
           <span id="headerCartTotal" class="header-cart-total">0đ</span>
         </div>
       </a>
-      <a class="btn login-btn" href="/login/">Đăng nhập</a>
-      <a class="btn signup-btn" href="/register/">Đăng ký</a>
+      <a class="btn login-btn" routerLink="/login/">Đăng nhập</a>
+      <a class="btn signup-btn" routerLink="/register/">Đăng ký</a>
     </div>
   </div>
 
   <nav class="nav-bar">
-    <a href="/" class="nav-item active"><img src="/TeaTrack/my-app/assets/icons/Home.png" alt=""> Trang chủ</a>
-    <a href="/aboutus/"><img src="/TeaTrack/my-app/assets/icons/info.png" alt="">Về chúng tôi</a>
-    <a href="/menu/" class="nav-item"><img src="/TeaTrack/my-app/assets/icons/menu.png" alt="">Menu thức uống</a>
-    <a href="/contact/"><img src="/TeaTrack/my-app/assets/icons/lien_he.png" alt="">Liên hệ</a>
-    <a href="/blog/"><img src="/TeaTrack/my-app/assets/icons/dien_dan.png" alt="">Diễn đàn</a>
-    <a href="/agency/"><img src="/TeaTrack/my-app/assets/icons/chi_nhanh.png" alt="">Chi nhánh</a>
+    <a routerLink="/" class="nav-item active"><img src="assets/icons/Home.png" alt=""> Trang chủ</a>
+    <a routerLink="/aboutus/"><img src="assets/icons/info.png" alt="">Về chúng tôi</a> 
+    <a routerLink="/menu/" class="nav-item"><img src="assets/icons/menu.png" alt="">Menu thức uống</a>
+    <a routerLink="/contact/"><img src="assets/icons/lien_he.png" alt="">Liên hệ</a>
+    <a routerLink="/blog/"><img src="assets/icons/dien_dan.png" alt="">Diễn đàn</a>
+    <a routerLink="/agency/"><img src="assets/icons/chi_nhanh.png" alt="">Chi nhánh</a>
   </nav>
 </header>
-
-<link rel="stylesheet" href="../page-header/page-header.css" />
