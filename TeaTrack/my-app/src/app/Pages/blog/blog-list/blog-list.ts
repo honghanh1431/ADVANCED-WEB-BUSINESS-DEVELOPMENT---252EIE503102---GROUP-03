@@ -21,6 +21,11 @@ export class BlogList implements OnInit {
 
   constructor(private router: Router) {}
 
+  /** Cuộn mượt lên đầu trang (dùng cho breadcrumb links) */
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   ngOnInit() {
     this.blogsArray = Object.keys(BLOG_DATA).map(
       key => ({
@@ -38,7 +43,11 @@ export class BlogList implements OnInit {
     this.displayedBlogs = this.blogsArray.slice(start, start + PAGE_SIZE);
   }
 
-  /** Định dạng ngày như hình: 13-15.06.25 hoặc 20.10.25 */
+  /** Bỏ <br/> trong heading để hiển thị 1 dòng trên blog list */
+  headingOneLine(heading: string): string {
+    return (heading || '').replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim();
+  }
+
   formatDate(dateStr: string): string {
     if (!dateStr) return dateStr;
     // "13-15/06/2025" -> "13-15.06.25", "20/10/2025" -> "20.10.25"

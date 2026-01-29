@@ -6,7 +6,9 @@
   <!-- Breadcrumb -->
   <section class="breadcrumb-banner">
     <h1 class="breadcrumb-title">Tất cả bài viết</h1>
-    <p class="breadcrumb-path">Trang chủ / Diễn đàn</p>
+    <p class="breadcrumb-path">
+      <a routerLink="/" (click)="scrollToTop()">Trang chủ</a> / <a routerLink="/blog" (click)="scrollToTop()">Diễn đàn</a>
+    </p>
   </section>
 
   <!-- Blog List Container -->
@@ -34,12 +36,11 @@
               {{ formatDate(blog.date) }}
             </p>
             <hr class="divider" />
-            <h3 class="promo-title">{{ blog.heading }}</h3>
+            <h3 class="promo-title">{{ headingOneLine(blog.heading) }}</h3>
           </div>
         </a>
       </div>
 
-      <!-- Pagination: luôn hiện, đủ 1 trang thì hiện số 1, mũi tên disable khi không chuyển được -->
       <nav class="pagination-wrap">
         <button
           type="button"

@@ -11,7 +11,7 @@
                placeholder="Nhập email của bạn tại đây"
                data-i18n-placeholder="footer.sub.placeholder"
                required>
-        <button type="button" id="footer-register-btn" class="btn-primary footer-register-btn" data-i18n="footer.sub.cta">Đăng ký</button>
+        <button type="button" id="footer-register-btn" class="btn-primary footer-register-btn" (click)="onRegisterClick()" data-i18n="footer.sub.cta">Đăng ký</button>
       </form>
     </div>
   </section>
@@ -21,11 +21,10 @@
     <div class="col brand">
       <img class="logo" src="assets/images/logo ngo gia.png" alt="Hồng Trà Ngô Gia" onerror="this.style.display='none'">
     </div>
-
     <nav class="col links">
       <h5 data-i18n="footer.links.title">Liên kết nhanh</h5>
       <ul>
-        <li><a routerLink="/src/Pages/Homepage/Home.html" data-i18n="footer.links.home">Trang chủ</a></li>
+        <li><a routerLink="/blog" data-i18n="footer.links.home">Trang chủ</a></li>
         <li><a routerLink="/aboutus" data-i18n="footer.links.about">Về chúng tôi</a></li>
         <li><a routerLink="/menu" data-i18n="footer.links.menu">Menu thức uống</a></li>
         <li><a routerLink="/contact" data-i18n="footer.links.contact">Liên hệ</a></li>

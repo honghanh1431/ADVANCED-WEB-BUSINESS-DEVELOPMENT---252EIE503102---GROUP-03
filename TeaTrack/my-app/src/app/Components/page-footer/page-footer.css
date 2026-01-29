@@ -3,13 +3,14 @@
   border-radius:16px;
   overflow: visible;
   font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin-top:60px;
 }
 
 .footer-cols{
-  grid-template-columns: 20% 15% 40% 20%; /* logo | links | branches | contact */
-  gap: 10px;
+  grid-template-columns: 20% 15% 42% 20%; 
+  gap: 15px;
   align-items: start;          
-  padding-left: 10%;
+  padding: 0 5% 0 5%;
   text-align: left;
   display: grid;
   border-top: none;
@@ -25,7 +26,7 @@
   align-items: flex-start; 
   margin-top: 70px;
   margin-bottom: 20px;    
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
 }
 .footer-cols .col h5{
@@ -35,10 +36,25 @@
   margin: 0 0 12px;
 }
 /* CỘT LIÊN KẾT NHANH */
-.col.links ul{ list-style: none; padding-left: 0px; margin: 0; }
-.col.links li + li{ margin-top: 8px; }
-.col.links a{ color:#0f172a; text-decoration:none; }
-.col.links a:hover{ color:#007bff; }
+.col.links ul{ 
+  list-style: none; 
+  padding-left: 0px; 
+  margin: 0; 
+}
+.col.links li + li{ 
+  margin-top: 8px; 
+}
+.col.links a{ 
+  color:#0f172a; 
+  text-decoration:none; 
+  font-style: italic;
+  font-size: 14px;
+}
+.col.links a:hover{ 
+  color:#007bff; 
+  font-style: italic;
+  font-size: 14px;
+}
 
 .col.branches ul{
   list-style: disc inside;     
@@ -48,20 +64,37 @@
 .col.branches li{
   line-height: 1.55;
   color:#0f172a;
+  font-style: italic;
   font-size: 14px;
 }
-.col.branches li + li{ margin-top: 8px; }
+.col.branches li + li{ 
+  margin-top: 8px; 
+  font-size: 14px;
+  font-style: italic;
+}
 
 /* CỘT LIÊN HỆ */
-.col.contact ul{ list-style: none; padding-left: 0; margin: 0; }
-.col.contact li{
-  display: flex; align-items: center; gap: 10px;
-  color:#0f172a;
+.col.contact ul{ 
+  list-style: none; 
+  padding-left: 0; 
+  margin: 0; 
 }
-.col.contact li + li{ margin-top: 10px; }
+.col.contact li{
+  display: flex; 
+  align-items: center; 
+  gap: 10px;
+  color:#0f172a;
+  font-size: 14px;
+  font-style: italic;
+}
+.col.contact li + li{ 
+  margin-top: 10px; }
 
 /* LOGO */
-.col.brand .logo{ width: 220px; height:auto; object-fit:contain; }
+.col.brand .logo{ 
+  width: 220px; 
+  height:auto; 
+  object-fit:contain; }
 
 .footer-bottom{
   padding: 14px 60px;
@@ -198,8 +231,6 @@
   color: #fff;
 }
 
-
-
 @media (max-width: 900px) {
   .subscribe {
     flex-direction: column;
@@ -225,10 +256,16 @@
 }
 
 :root{ --overlap: 130px; }
-.subscribe{ transform: translateY(calc(var(--overlap) * 0.5));
-            margin-bottom: calc(var(--overlap) * -1); }
-.footer-cols{ padding-top: calc(var(--overlap) + 80px); }
-@media (max-width: 768px){ :root{ --overlap: 0px; } }
+.subscribe{ 
+  transform: translateY(calc(var(--overlap) * 0.5));
+  margin-bottom: calc(var(--overlap) * -1); 
+}
+.footer-cols{ 
+  padding-top: calc(var(--overlap) + 80px); 
+}
+@media (max-width: 768px){ 
+  :root{ --overlap: 0px; } 
+}
 
 /* Subscribe success modal */
 .sub-modal { 
