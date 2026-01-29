@@ -79,7 +79,6 @@ body {
 
 .promo-container {
   display: grid;
-  /* Blog list: 4 cột như hình mẫu */
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   max-width: 1200px;
@@ -87,61 +86,73 @@ body {
   padding: 20px;
 }
 
+/* Blog card: bo góc 15–20px, nền trắng, overflow hidden, ảnh full width */
 .promo-card {
-  width: 100%; 
-  max-width: 280px; 
-  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 18px;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(140, 140, 140, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  border: 1px solid #e0e0e0;
-  transition: all 0.25s ease;
-  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
 }
 
 .promo-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 136, 255, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .promo-img {
   width: 100%;
-  height: 220px; 
-  object-fit: fill;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.promo-content {
+  padding: 16px 18px;
+  text-align: left;
+  background: #fff;
+  flex: 1;
 }
 
 .promo-date {
   font-size: 13px;
-  color: #0088ff;
-  padding-left: 0;
-  margin: 0;
-  font-weight: 600;
+  color: #808080;
+  margin: 0 0 5px 0;
+  font-weight: 400;
 }
 
-.promo-title {
-  color: #305C33;
-  font-size: 14px; /* Giảm font size */
-  line-height: 1.4;
-  margin: 0;
-  padding-left: 0;
-  width: 100%;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 700;
-}
-
-.promo-content {
-  padding: 12px 16px;
-  text-align: left;
+.promo-date img {
+  vertical-align: middle;
+  margin-right: 4px;
+  margin-bottom: 2px;
 }
 
 .divider {
   border: none;
-  border-top: 2px solid #e2e8f0;
-  margin: 10px 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 8px 0 10px 0;
   width: 100%;
+}
+
+.promo-title {
+  color: #0b1320;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 650;
 }
 
 /* Pagination blog list như hình mẫu */
@@ -234,7 +245,7 @@ body {
 
 .blog-img {
   width: 100%;
-  max-width: 800px; /* Ảnh không quá 800px */
+  max-width: 1000px; /* Ảnh không quá 800px */
   height: auto; /* Tự động tính chiều cao theo tỷ lệ */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -245,7 +256,7 @@ body {
 /* Blog Content - line-height đều, màu chữ đồng nhất cho p và ul li */
 .blog-content {
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 0 20px;
   text-align: justify;
   line-height: 1.6;
@@ -401,10 +412,12 @@ body {
 }
 
 .related-img {
-  width: 100%;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
   height: 280px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius:0;
   margin-bottom: 16px;
   display: block;
 }
